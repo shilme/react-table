@@ -1,0 +1,116 @@
+.rt-pagenation{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-between;
+    padding: 3px;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
+    border-top: 2px solid rgba(0,0,0,0.1);
+}
+.-center,.-previous,.-next{
+    flex: 1;
+    -webkit-box-flex:1;
+    text-align: center;
+}
+.-previous>button,
+.-next>button{
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+.-center>input{
+    width: 50px;
+    margin: 0 10px;
+}
+.-center>span{
+    margin: 0 15px 0 0; 
+}
+.-center>*{
+    outline: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+table {
+  width: 100%;
+  min-width: 1000px;
+   /* 自定义宽度要设置成fixed */
+  table-layout: fixed;
+  /* 设置单元格间距 */
+  border-spacing:0;
+}
+
+td,th {
+  box-sizing: border-box;
+  white-space: nowrap; /* 超出长度显示 ... */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+td:first-child,th:first-child, td:nth-child(2),th:nth-child(2) {
+  /* 设置首列200 ,设置th才有效*/
+  width: 200px;
+}
+thead tr th {
+  /* th设置粘性定位 */
+  background-color: pink;
+  position: sticky;
+  top: 0;
+}
+
+td:first-child {
+  /* td第一个粘性定位 */
+  position: sticky;
+  left: 0;
+  background-color: skyblue;
+}
+td:nth-child(2) {
+  /* td第一个粘性定位 */
+  position: sticky;
+  background-color: skyblue;
+}
+td:last-child {
+  /* td第一个粘性定位 */
+  position: sticky;
+  right: 0;
+  background-color: skyblue;
+}
+thead tr th:first-child  {
+  /* th设置粘性定位 */
+  background-color: pink;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+thead tr th:nth-child(2)  {
+  /* th设置粘性定位 */
+  background-color: pink;
+  position: sticky;
+  top: 0;
+  left: 200px;
+}
+thead tr th:last-child  {
+  /* th设置粘性定位 */
+  background-color: pink;
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+/* td:nth-child(2) {
+  position: sticky;
+  left: 0;
+  background-color: skyblue;
+} */
+thead tr th:last-child,thead tr th:first-child,thead tr th:nth-child(2),thead tr th:nth-child(3)  {
+  /* 第一个由于要保持上下和左右滚动都不被覆盖，设置在最上面 */
+  z-index: 1;
+  left: 0;
+}
+
+
+/*# sourceMappingURL=/src.fc45d0fd.css.map */
